@@ -24,6 +24,7 @@ export default function ChartKitScreen() {
         }
     };
     const screenWidth = Dimensions.get("window").width;
+
     return (
         <View style={{ flex: 1 , padding : 10 }}>            
             <Text style={{ fontSize : 20 }}>
@@ -41,5 +42,7 @@ export default function ChartKitScreen() {
                 }}
             />
         </View>
-   );
+
+);
 }
+

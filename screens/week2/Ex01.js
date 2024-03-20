@@ -1,29 +1,16 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Button, View } from "react-native";
 
-export default function Ex01() {
+export default function Ex1() {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>    
-       <TextInput
-        keyboardType="email-address"
-        autoCapitalize="none"
-        autoCorrect={false}
-        maxLength={30}
-        multiline={false}
-        placeholder="Please enter your email"
-        returnKeyType="next"
-        onChangeText={(text)=>{}}
-        defaultVaslue="Default text"
-      />
+    <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, flexDirection: "column" }}>
+        <View style={{ backgroundColor: "#50E3C2", height: 116 }}></View>
+      </View>
+      <Button title="Next" onPress={() => navigation.navigate("Ex02")} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ECD4D4',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

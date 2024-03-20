@@ -1,5 +1,6 @@
+
+import { Button, Text, TextInput, TouchableOpacity, View } from "react-native";
 import React, { useState } from 'react';
-import { Button, Text, TextInput, View ,TouchableOpacity} from "react-native";
 export default function Bmi() {
     const [weight , setWeight] = useState('');
     const [height , setHeight] = useState('');
@@ -16,56 +17,57 @@ export default function Bmi() {
         console.log(output); //Print ค่าใหม่ออกมา
         let description = "";
         if (output<18.5)
-                description ="Underweight - eat a bagel!";
+                description ="Underweight ";
         else if (output>=18.5 && output<=24.99)
-                description ="Normal - keep it up!";
+                description ="Normal ";
         else if (output>=25 && output<=29.99)
-                description ="Overweight - exercise more!";
+                description ="Overweight ";
         else if (output>=30 && output<=39.99)
-                description ="Obese - get off the couch!";
+                description ="Obese ";
         else
-        description ="Morbidly Obese - take action!";
+        description ="Morbidly Obese ";
 
         setDescription(description)
  };
 
-
-
     return (
         <View>
             {/* แถวที่ 1 */}
-            <View style={{ backgroundColor: "white", padding:20,borderRadius:10, height : 100, justifyContent:"space-around", marginTop :20 }}>
-                <Text style={{ fontSize : 20 }}>Weight (Kg.)</Text>
+            <View style={{ backgroundColor: "white", padding: 20, marginVertical: 10, borderRadius: 10, height: 150, justifyContent: "space-around" }}>
+                <Text style={{ fontSize: 20 }}>Weight (kg.)</Text>
                 <TextInput
-                value={weight}
-                style={{ fontSize : 20 }}
-                keyboardType="numeric"
-                placeholder="Input your weight"
-                onChangeText={ (newWeight) => setWeight(newWeight) }
-                />
+                    value={weight}
+                    style={{ fontSize: 20 }}
+                    keyboardType="numeric"
+                    onChangeText={(newWeight) => setWeight(newWeight)}
+                    placeholder="Input your weight..." />
             </View>
             {/* แถวที่ 2 */}
-            <View style={{ backgroundColor: "white", padding:20,borderRadius:10, height : 100, justifyContent:"space-around", marginTop :20 }}>
-            <Text style={{ fontSize : 20 }}>Height (cm.)</Text>
+            <View style={{ backgroundColor: "white", padding: 20, marginVertical: 10, borderRadius: 10, height: 150, justifyContent: "space-around" }}>
+                <Text style={{ fontSize: 20 }}>Height (cm.)</Text>
                 <TextInput
-                value={height}
-                style={{ fontSize : 20 }}
-                keyboardType="numeric"
-                placeholder="Input your weight"
-                onChangeText={ (newHeight) => setHeight(newHeight) }
-                />
+                    value={height}
+                    style={{ fontSize: 20 }}
+                    keyboardType="numeric"
+                    onChangeText={(newHeight) => setHeight(newHeight)}
+
+
+                    placeholder="Input your height..." />
             </View>
             {/* แถวที่ 3 */}
-            <View style={{flexDirection : "row", marginVertical:20 }}>
-                <View style={{backgroundColor : "white", flex:1, borderRadius : 10, height:100, justifyContent : "center" , alignItems:"center" ,marginLeft:10}}>
-                    <Text>{bmi}</Text>
+            <View style={{ flexDirection: "row", marginVertical: 10 }}>
+                {/* ซ้าย */}
+                <View style={{ flex: 1, backgroundColor: "white", flex: 1, borderRadius: 10, height: 100, justifyContent: "center", alignItems: "center", marginRight: 10 }}>
+                    <Text style={{ fontSize: 20 }}>BMI : {bmi}</Text>
                 </View>
-                <View style={{backgroundColor : "white", flex:1, borderRadius : 10, height:100, justifyContent : "center" , alignItems:"center" ,marginLeft:10 }}> 
-                    <Text style={{ fontSize: 20}}>{description}</Text>
+                <View style={{ flex: 1, backgroundColor: "white", flex: 1, borderRadius: 10, height: 100, justifyContent: "center", alignItems: "center", marginRight: 10 }}>
+                    <Text style={{ fontSize: 20 }}>{description}</Text>
                 </View>
-
             </View>
             {/* แถวที่ 4 */}
+
+
+
             <TouchableOpacity onPress={onPressButton}>
                 <View style={{ padding: 20, backgroundColor: "blue", borderRadius: 40 }}>
                     <Text style={{ fontSize: 30, textAlign: "center", color: 'white' }}>
@@ -73,6 +75,8 @@ export default function Bmi() {
                     </Text>
                 </View>
             </TouchableOpacity>
+
+
         </View>
     );
 }

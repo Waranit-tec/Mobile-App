@@ -15,74 +15,43 @@ import Ex10 from './screens/week2/Ex10';
 import Ex11 from './screens/week2/Ex11';
 import Ex12 from './screens/week2/Ex12';
 import Extra from './screens/week2/Extra';
+import { TextInput, StyleSheet, View } from 'react-native';
 import Travel from './screens/week3/Travel';
-import Resort from './screens/week3/Resort';
-import { TextInput, View, StyleSheet } from 'react-native';
-import Greeting from './components/Greeting';
-import Home from './screens/week6/Home';
-
+import TestPaper from './screens/week4/TestPaper';
 import { PaperProvider } from 'react-native-paper';
-// import TestPaper from './screens/week4/TestPaper';
+import Resort from './screens/week3/Resort';
 import Health from './screens/week5/Health';
 import ChartKitScreen from './screens/week5/ChartKitScreen';
-
+import Home from './screens/week6/Home';
+import FlatListExample from './screens/week6/FlatListExample';
+import HomeStack from './navigations/HomeStack';
+import { NavigationContainer } from '@react-navigation/native';
+import BottomTab from './navigations/BottomTab';
+import RootStack from './navigations/RootStack';
 export default function App() {
+
   return (
-    // <Ex01 />
-    // <Ex02 />
-    // <Ex03 />
-    // <Ex04 />
-    // <Ex05 />
-    // <Ex06 />
-    // <Ex07 />
-    // <Ex08 />
-    // <Ex09 />
-    // <Ex10 />
-    // <Ex11 />
-    // <Ex12 />
-    // <Extra />
-    // <View style={styles.container}>    
-    //    <TextInput
-    //     keyboardType="email-address"
-    //     autoCapitalize="none"
-    //     autoCorrect={false}
-    //     maxLength={30}
-    //     multiline={false}
-    //     placeholder="Please enter your email"
-    //     returnKeyType="next"
-    //     onChangeText={(text)=>{}}
-    //     defaultVaslue="Default text"
-    //   />
-    // </View>
-
-    // <View style={{alignItems: 'center', top: 50}}>
-    // <Greeting name='Rexxar' />
-    // <Greeting name='Jaina' />
-    // <Greeting name='Valeera' />
-    // </View>
-
-    // <Travel />
-
-    // <PaperProvider>
-    //   <TestPaper />
-    // </PaperProvider>
-
-    // <Resort/>
-
-    // <Health/>
-
-    // <ChartKitScreen/>
-    <Home />
+    //<Ex12 />
+    //<Travel />
+    //<PaperProvider>
+    //<TestPaper />
+    //</PaperProvider>
+    // <Health />
+    //<ChartKitScreen />
+    //<Home />
+    //<FlatListExample/>
+    <NavigationContainer>
+        <RootStack />
+    </NavigationContainer>
 
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#ECD4D4',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
+//const styles = StyleSheet.create({
+//container: {
+//flex: 1,
+//backgroundColor: '00000',
+//alignItems: 'center',
+//justifyContent: 'center',
+//},
+//});
