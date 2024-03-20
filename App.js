@@ -17,7 +17,7 @@ import Ex12 from './screens/week2/Ex12';
 import Extra from './screens/week2/Extra';
 import { TextInput, StyleSheet, View } from 'react-native';
 import Travel from './screens/week3/Travel';
-import TestPaper from './screens/week4/TestPaper';
+// import TestPaper from './screens/week4/TestPaper';
 import { PaperProvider } from 'react-native-paper';
 import Resort from './screens/week3/Resort';
 import Health from './screens/week5/Health';

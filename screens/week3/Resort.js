@@ -6,7 +6,7 @@ import Hotel from '../../components/week3/Hotel';
 //import Card from '../../components/week3/card';
 import MyIcon from '../../components/week3/MyIcon';
 import Menu from '../../components/week3/Menu';
-import Section1 from '../../components/week4/Section1';
+import Section1 from '../../components/week3/Section1';
 import Section2 from '../../components/week3/Section2';
 import Section3 from '../../components/week3/Section3';
 import Section4 from '../../components/week3/Section4';
