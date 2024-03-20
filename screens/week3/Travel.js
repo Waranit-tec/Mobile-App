@@ -16,7 +16,7 @@ export default function Travel() {
             <Card />
             <Hotel />
             <Signup />
-            <MyIcon/>
+            
         </View>
         </ScrollView> 
     );

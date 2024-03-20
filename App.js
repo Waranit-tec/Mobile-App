@@ -19,9 +19,12 @@ import Travel from './screens/week3/Travel';
 import Resort from './screens/week3/Resort';
 import { TextInput, View, StyleSheet } from 'react-native';
 import Greeting from './components/Greeting';
+import Home from './screens/week6/Home';
 
 import { PaperProvider } from 'react-native-paper';
-import TestPaper from './screens/week4/TestPaper';
+// import TestPaper from './screens/week4/TestPaper';
+import Health from './screens/week5/Health';
+import ChartKitScreen from './screens/week5/ChartKitScreen';
 
 export default function App() {
   return (
@@ -64,17 +67,22 @@ export default function App() {
     //   <TestPaper />
     // </PaperProvider>
 
-    <Resort/>
+    // <Resort/>
+
+    // <Health/>
+
+    // <ChartKitScreen/>
+    <Home />
 
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ECD4D4',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#ECD4D4',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
 
